@@ -6,17 +6,18 @@ Godot game
 ### Arcade Mode
 
 1. Blocks
-  * 2x2, 3x3 or 4x4 grid
+  * ~~2x2, 3x3 or~~ 4x4 grid
   * Created from parts
-  * Starts partially filled; solid blocks are...solid, empty blocks are surround by a dotted line
+  * Starts partially filled; solid blocks are...solid, empty spots in blocks are surround by a dotted line
   * Max 3 on belt
-  * Have empty spaces that can be filled with parts
+  * Have empty spaces that can be filled with parts - should have set of predefine incomplete blocks for MVP
   * scoring complete -1pt
   * scoring incomplete +1pt
 
 2. Parts
   * 4 part types
-    single square 1x1
+    single square
+    |---|
     three long 3x1
     corner L
     Tee T
