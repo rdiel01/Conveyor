@@ -16,8 +16,10 @@ Godot game
 
 2. Parts
   * 4 part types
-     X      XXX     X       XXX
-                    XX       X
+    single square 1x1
+    three long 3x1
+    corner L
+    Tee T
   * Place into blocks, one at a time
   * Picked up & rotated, one at a time
   * Can be placed back into parts bin
@@ -36,6 +38,23 @@ Godot game
   * Parts cannot overlap existing parts in the block
 
 # Pieces system
+
+### Piece
+- Represents 1x1 square
+boolean exists = false;
+
+### Form extends Piece
+- array of pieces
+extends Piece
+boolean[] bottom = new array<boolean>[4]
+  * indices represent 4 sides of form
+
+### Part extends Form
+
+
+### Block extends Form
+
+
 
 
 
