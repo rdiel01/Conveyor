@@ -49,25 +49,32 @@ once the block meets the end of the conveyor the block is not scored.
 boolean exists = false;
 
 ### Form extends Piece
-- array of pieces
-extends Piece
-boolean[] Form = new array<boolean>[12]
+- array of pieces used to represent Parts and Blocks
+Piece[] Form = new array<Piece>[12]
 This array can be used to represent the form and allow for parts to be rotated
-and stil be compared to Blocks with the correct orientation.
+and still be compared to Blocks with the correct orientation.
 
 Visualiztion of Form array:
-[ 1 ][ 2 ][ 3 ][ 4 ]
-[ 12][ 13][ 14][ 5 ]
-[ 11][ 16][ 15][ 6 ]
-[ 10][ 9 ][ 8 ][ 7 ]
+[ 1 ][ 2 ][ 3 ][ 4 ]\
+[ 12][ 13][ 14][ 5 ]\
+[ 11][ 16][ 15][ 6 ]\
+[ 10][ 9 ][ 8 ][ 7 ]\
 
-  * indices represent 4 sides of form
+  * indices represent Pieces in Form
+  * Iterating over Pieces in the Form of a Part and Block will allow for comparison
+  of overall shape that exists in each. This can be used to determine if a Part (in any orientation)
+  can be placed in empty Pieces of a Block.
+  *Will need to find a way to compare a Part and Block when the Part's Form 
+  would be offset from the Block's Form
 
 ### Part extends Form
-
+- int topLeft
+    * Starting index for part orientation and comparison
+    * Parts can be rotated and topLeft can change to represent new orientation
+    * topLeft will be 0,3,7 or 9
 
 ### Block extends Form
-
+    * Blocks do not rotate so start will always be at 0
 
 
 
